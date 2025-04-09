@@ -40,6 +40,6 @@ NPC нема nametag. Ово може да се направи преко Attach
 
 - [IsPlayerNPC](IsPlayerNPC): Проверава да ли је играч заправо играч или NPC.
 
-## Слични callback-ови
+## Повезане повратне функције
 
 - [OnPlayerConnect](../callbacks/OnPlayerConnect): Позива се кад се играч повеже на сервер.

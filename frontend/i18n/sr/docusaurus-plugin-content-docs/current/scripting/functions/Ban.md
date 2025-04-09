@@ -15,6 +15,8 @@ tags: ["player", "administration"]
 
 IP забране могу се додати/уклонити коришћењем RCON команди `banip` и `unbanip` команди ([SendRconCommand](SendRconCommand)).
 
+## Парамтери
+
 | Име      | Опис                         |
 | -------- | ---------------------------- |
 | playerid | ID играћа кога банујемо.     |

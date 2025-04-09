@@ -1,17 +1,19 @@
 ---
 title: IsPlayerNPC
 sidebar_label: IsPlayerNPC
-description: Provera da li je igrac pravi igrac ili NPC.
+description: Проверава да ли је играч прави или NPC.
 tags: ["player", "npc"]
 ---
 
 ## Опис
 
-Provera da li je igrac pravi igrac ili NPC.
+Проверава да ли је играч прави или NPC.
 
-| Name     | Description                 |
+## Парамтери 
+
+| Назив     | Опис                 |
 | -------- | --------------------------- |
-| playerid | ID igraca koji se proverava |
+| playerid | ID играча који се проверава. |
 
 ## Враћа
 

@@ -7,7 +7,7 @@ tags: ["player"]
 
 ## Опис
 
-Kreira eksploziju koja je vidljiva samo jednom igracu. Funkcija moze da se koristi kako bi se eksplozija odvojila od ostalih igraca ili prikazala u posebnom virtuelnom svetu.
+Креира експлозију која је видљива само једном играчу. Функција може да се користи како би се експлозија одвојила од осталих играча или приказала у посебном виртуелном свету.
 
 | Име          | Опис                                          |
 | ------------ | --------------------------------------------- |
@@ -20,7 +20,7 @@ Kreira eksploziju koja je vidljiva samo jednom igracu. Funkcija moze da se koris
 
 ## Враћа
 
-Ова функција увек враћа 1, иако је функција неуспешно извршења (играч не постоји, неправилна величина, или непостојећи тип експлозије).
+Ова функција увек враћа **1**, иако је функција неуспешно извршења (играч не постоји, неправилна величина, или непостојећи тип експлозије).
 
 ## Примери
 

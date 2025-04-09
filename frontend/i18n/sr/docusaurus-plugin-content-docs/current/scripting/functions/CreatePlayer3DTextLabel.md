@@ -9,6 +9,8 @@ tags: ["player", "3dtextlabel"]
 
 Креира 3D Text Label само за посебног играча.
 
+## Парамтери
+
 | Име                | Опис                                                                   |
 | ------------------ | ---------------------------------------------------------------------- |
 | playerid           | Играч који треба да види новокреирани 3D label.                        |
@@ -21,7 +23,7 @@ tags: ["player", "3dtextlabel"]
 | attachedplayer     | Играч за кога желимо закачити 3D label. (Ниједан: INVALID_PLAYER_ID)   |
 | attachedvehicle    | Возило за кога желимо закачити 3D label. (Ниједан: INVALID_VEHICLE_ID) |
 | bool:testLOS       | 0/1 Опција да се текст лабела не може видети кроз зидове               |
-| OPEN_MP_TAGS:...   | Indefinite number of arguments of any tag.                             |
+| OPEN_MP_TAGS:...   | Неограничен број аргумената било ког тага.                             |
 
 ## Враћа
 

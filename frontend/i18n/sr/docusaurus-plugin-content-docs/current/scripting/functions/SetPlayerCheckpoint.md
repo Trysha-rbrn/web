@@ -9,7 +9,9 @@ tags: ["player", "checkpoint"]
 
 Поставља checkpoint (црвени круг) за играча. Такође приказује црвену коцку на мапи. Када играч уђе у checkpoint, OnPlayerEnterCheckpoint се позива и извршава оно што је у њему.
 
-| ИМе        | Опис                                   |
+## Парамтери 
+
+| Име        | Опис                                   |
 | ---------- | -------------------------------------- |
 | playerid   | ID igraca kome se postavlja checkpoint |
 | Float:x    | X koordinata checkpointa.              |
@@ -69,7 +71,7 @@ Checkpoint-ови су асинхрони, што значи да се само 
 - [DisablePlayerRaceCheckpoint](DisablePlayerRaceCheckpoint): Искључи тренутни тркачки checkpoint играча.
 - [IsPlayerInRaceCheckpoint](IsPlayerInRaceCheckpoint): Провери да ли је играч у рацинг checkpoint-у.
 
-## Слични callback-ови
+## Повезане повратне функције
 
 - [OnPlayerEnterCheckpoint](../callbacks/OnPlayerEnterCheckpoint): Позива се када играч уђе у checkpoint.
 - [OnPlayerLeaveCheckpoint](../callbacks/OnPlayerLeaveCheckpoint): Позива се када играч напусти checkpoint.
