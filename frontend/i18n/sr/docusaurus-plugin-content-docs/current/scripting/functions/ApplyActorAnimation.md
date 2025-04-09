@@ -1,35 +1,37 @@
 ---
 title: ApplyActorAnimation
 sidebar_label: ApplyActorAnimation
-description: Apply an animation to an actor.
+description: Примењује анимацију на актора.
 tags: ["actor", "animation"]
 ---
 
-<VersionWarn version='SA-MP 0.3.7' />
+<VersionWarnSR version='SA-MP 0.3.7' />
 
-## Description
+## Опис
 
-Apply an animation to an actor.
+Примењује анимацију на актора.
 
-| Name                     | Description                                                                                                                                                                                            |
+## Параметри
+
+| Назив                     | Опис                                                                                                                                                                                            |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| actorid                  | The ID of the actor to apply the animation to.                                                                                                                                                         |
-| const animationLibrary[] | The animation library from which to apply an animation.                                                                                                                                                |
-| const animationName[]    | The name of the animation to apply, within the specified library.                                                                                                                                      |
-| float:delta              | The speed to play the animation (use 4.1).                                                                                                                                                             |
-| bool:loop                | If set to true, the animation will loop. If set to false, the animation will play once.                                                                                                                |
-| bool:lockX               | If set to false, the actor is returned to their old X coordinate once the animation is complete (for animations that move the actor such as walking). true will not return them to their old position. |
-| bool:lockY               | Same as above but for the Y axis. Should be kept the same as the previous parameter.                                                                                                                   |
-| bool:freeze              | Setting this to true will freeze an actor at the end of the animation. false will not.                                                                                                                 |
-| time                     | Timer in milliseconds. For a never-ending loop it should be 0.                                                                                                                                         |
+| actorid                  | ID актора на ког се примењује анимација.                                                                                                                                                         |
+| const animationLibrary[] | Име анимационе библиотеке из које се узима анимација.                                                                                                                                                |
+| const animationName[]    | Име анимације која се примењује из наведене библиотеке.                                                                                                                                      |
+| float:delta              | Брзина којом се анимација пушта (користити 4.1).                                                                                                                                                             |
+| bool:loop                | Ако је true, анимација ће се понављати у петљи. Ако је false, одиграће се једном.                                                                                                                |
+| bool:lockX               | Ако је false, актор се након анимације враћа на претходну X координату (за анимације које померају актора, као што је ходање). Ако је true, остаје на новој позицији. |
+| bool:lockY               | Исто као и lockX, али за Y осу. Треба да буде исто као и претходни параметар.                                                                                                                   |
+| bool:freeze              | Ако је true, актор ће остати у последњем кадру анимације. Ако је false, неће.                                                                                                                 |
+| time                     |Тајмер у милисекундама. За бесконачну петљу користити 0.                                                                                                                                         |
 
-## Returns
+## Враћа
 
-**true** - The function executed successfully.
+**true** - Функција је успешно извршена.
 
-**false** - The function failed to execute. The actor specified does not exist.
+**false** - Функција није извршена (актор не постоји).
 
-## Examples
+## Примери
 
 ```c
 new gMyActor;
@@ -49,15 +51,15 @@ public OnPlayerConnect(playerid)
 }
 ```
 
-## Notes
+## Белешке
 
 :::tip
 
-You must preload the animation library for the player the actor will be applying the animation for, and not for the actor. Otherwise, the animation won't be applied to the actor until the function is executed again.
+Морате прво преучитати анимациону библиотеку за играча који гледа актора, а не за самог актора. У супротном, анимација неће бити примењена док функција поново не буде извршена.
 
 :::
 
-## Related Functions
+## Повезане функције
 
-- [ClearActorAnimations](ClearActorAnimations): Clear any animations that are applied to an actor.
-- [GetActorAnimation](GetActorAnimation): Get the animation the actor is currently performing.
+- [ClearActorAnimations](ClearActorAnimations): Уклања све анимације које су примењене на актора.
+- [GetActorAnimation](GetActorAnimation): Враћа тренутну анимацију коју актор изводи.

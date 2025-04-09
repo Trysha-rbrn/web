@@ -1,29 +1,29 @@
 ---
 title: CreateMenu
 sidebar_label: CreateMenu
-description: Creates a menu.
+description: Креира мени.
 tags: ["menu"]
 ---
 
-## Description
+## Опис
 
-Creates a menu.
+Креира мени.
 
-| Name               | Description                                                                         |
+| Назив               | Опис                                                                         |
 | ------------------ | ----------------------------------------------------------------------------------- |
-| const title[]      | The title for the new menu.                                                         |
-| columns            | How many colums shall the new menu have.                                            |
-| Float:x            | The X position of the menu (640x460 canvas - 0 would put the menu at the far left). |
-| Float:y            | The Y position of the menu (640x460 canvas - 0 would put the menu at the far top).  |
-| Float:column1width | The width for the first column.                                                     |
-| Float:column2width | The width for the second column.                                                    |
-| OPEN_MP_TAGS:...   | Indefinite number of arguments of any tag.                                          |
+| const title[]      | Назив новог менија.                                                         |
+| columns            | 	Колико колона ће имати нови мени.                                            |
+| Float:x            | 	X позиција менија (640x460 платно - 0 ће поставити мени на леву страну). |
+| Float:y            | Y позиција менија (640x460 платно - 0 ће поставити мени на горњу страну).  |
+| Float:column1width | Ширина прве колоне.                                                     |
+| Float:column2width | Ширина друге колоне.                                                    |
+| OPEN_MP_TAGS:...   | Непознат број аргумената било ког типа.                                          |
 
-## Returns
+## Враћа
 
-The ID of the new menu or **-1** on failure.
+ID новог менија или **-1** ако је дошло до грешке.
 
-## Examples
+## Примери
 
 ```c
 new Menu:exampleMenu;
@@ -35,31 +35,31 @@ public OnGameModeInit()
 }
 ```
 
-## Notes
+## Белешке
 
 :::tip
 
-- This function merely CREATES the menu - [ShowMenuForPlayer](ShowMenuForPlayer) must be used to show it.
-- You can only create and access 2 columns (0 & 1).
-- If the title's length is equal to or greater than 32 chars the title is truncated to 30 characters.
+- Ова функција само КРЕИРА мени - за приказивање менија треба користити [ShowMenuForPlayer](ShowMenuForPlayer).
+- Можете креирати и приступити само 2 колоне (0 и 1).
+- Ако дужина наслова буде једнака или већа од 32 знака, наслов ће бити скраћен на 30 знакова.
 
 :::
 
 :::warning
 
-There is a limit of 12 items per menu, and a limit of 128 menus in total.
+Постоји ограничење од 12 ставки по менију и ограничење од 128 менија укупно.
 
 :::
 
-## Related Functions
+## Повезане функције
 
-- [AddMenuItem](AddMenuItem): Adds an item to a specified menu.
-- [SetMenuColumnHeader](SetMenuColumnHeader): Set the header for one of the columns in a menu.
-- [DestroyMenu](DestroyMenu): Destroy a menu.
-- [ShowMenuForPlayer](ShowMenuForPlayer): Show a menu for a player.
-- [HideMenuForPlayer](HideMenuForPlayer): Hide a menu for a player.
+- [AddMenuItem](AddMenuItem): Додаје ставку у одређени мени.
+- [SetMenuColumnHeader](SetMenuColumnHeader): Поставља заглавље за једну од колона у менију.
+- [DestroyMenu](DestroyMenu): Уништава мени.
+- [ShowMenuForPlayer](ShowMenuForPlayer): Приказује мени за играча.
+- [HideMenuForPlayer](HideMenuForPlayer): Скрива мени за играча.
 
-## Related Callbacks
+## Повезане поратне функције
 
-- [OnPlayerSelectedMenuRow](../callbacks/OnPlayerSelectedMenuRow): Called when a player selected a row in a menu.
-- [OnPlayerExitedMenu](../callbacks/OnPlayerExitedMenu): Called when a player exits a menu.
+- [OnPlayerSelectedMenuRow](../callbacks/OnPlayerSelectedMenuRow): Позива се када играч изабере ред у менију.
+- [OnPlayerExitedMenu](../callbacks/OnPlayerExitedMenu): Позива се када играч изађе из менија.

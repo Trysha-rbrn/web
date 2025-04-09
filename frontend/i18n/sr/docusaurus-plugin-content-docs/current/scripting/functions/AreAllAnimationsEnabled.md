@@ -1,37 +1,37 @@
 ---
 title: AreAllAnimationsEnabled
 sidebar_label: AreAllAnimationsEnabled
-description: Are the animations missing from some versions enabled?
+description: Да ли су омогућене анимације које недостају у неким верзијама?
 tags: ["animation"]
 ---
 
-<VersionWarn version='omp v1.1.0.2612' />
+<VersionWarnSR version='omp v1.1.0.2612' />
 
-## Description
+## Опис
 
-Are the animations missing from some versions enabled?
+Проверава да ли су омогућене све анимације, укључујући оне које недостају у појединим верзијама.
 
-## Returns
+## Враћа
 
-true: Enable.
+**true**: Омогућене су.
 
-false: False.
+**false**: Није омогућено.
 
-## Examples
+## Примери
 
 ```c
 if (AreAllAnimationsEnabled())
 {
-    // Do something
+    // Изврши неку радњу
 }
 ```
 
-## Related Functions
+## Повезане функције
 
-- [EnableAllAnimations](EnableAllAnimations): Allow use of the animations missing from some versions.
-- [ApplyAnimation](ApplyAnimation): Apply an animation to a player.
-- [ClearAnimations](ClearAnimations): Clear any animations a player is performing.
+- [EnableAllAnimations](EnableAllAnimations): Омогућава коришћење анимација које недостају у неким верзијама.
+- [ApplyAnimation](ApplyAnimation): Примењује анимацију на играча.
+- [ClearAnimations](ClearAnimations): Уклања све анимације које играч изводи.
 
-## Related Resources
+## Повезани ресурси
 
-- [Animations](../resources/animations)
+- [Анимације](../resources/animations)

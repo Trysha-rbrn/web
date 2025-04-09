@@ -1,28 +1,28 @@
 ---
 title: UseGangZoneCheck
 sidebar_label: UseGangZoneCheck
-description: Enables the callback when a player enters/leaves this zone
+description: Омогућава позивну функцију када играч уђе/напусти ову зону.
 tags: ["player", "gangzone"]
 ---
 
-<VersionWarn version='omp v1.1.0.2612' />
+<VersionWarnSR version='omp v1.1.0.2612' />
 
-## Description
+## Опис
 
-Enables the callback when a player enters/leaves this zone.
+Омогућава позивну функцију када играч уђе/напусти ову зону.
 
-| Name        | Description                                                    |
+| Назив        | Опис                                                    |
 | ----------- | -------------------------------------------------------------- |
-| zoneid      | The ID of the zone to enable area detection for.               |
-| bool:enable | Should entry detection be started or stopped? (`true`/`false`) |
+| zoneid      | ID зоне за коју ће бити омогућена детекција подручја.               |
+| bool:enable | Да ли треба започети или зауставити детекцију улаза? (`true`/`false`) |
 
-## Returns
+## Враћа
 
-**1:** The function executed successfully.
+**1:** - Функција је успешно извршена.
 
-**0:** The function failed to execute. The gangzone specified does not exist.
+**0:** - Функција није успела да се изврши. Зона која је наведена не постоји.
 
-## Examples
+## Примери
 
 ```c
 new gGangZoneID = INVALID_GANG_ZONE;
@@ -58,27 +58,27 @@ public OnPlayerLeaveGangZone(playerid, zoneid)
 }
 ```
 
-## Related Callbacks
+## Повезане повратне функције
 
-The following callbacks might be useful, as they're related to this function in one way or another. 
+Следеће повратне функције могу бити корисне, јер су на неки начин повезане са овом функцијом.
 
-- [OnPlayerEnterGangZone](../callbacks/OnPlayerEnterGangZone): This callback is called when a player enters a gangzone.
-- [OnPlayerLeaveGangZone](../callbacks/OnPlayerLeaveGangZone): This callback is called when a player exited a gangzone.
+- [OnPlayerEnterGangZone](../callbacks/OnPlayerEnterGangZone): Овај повратни позив се позива када играч уђе у зону.
+- [OnPlayerLeaveGangZone](../callbacks/OnPlayerLeaveGangZone): Овај повратни позив се позива када играч напусти зону.
 
-## Related Functions
+## Повезане функције
 
-The following functions might be useful, as they're related to this function in one way or another. 
+Следеће функције могу бити корисне, јер су на неки начин повезане са овом функцијом.
 
-- [GangZoneCreate](GangZoneCreate): Create a gangzone.
-- [GangZoneDestroy](GangZoneDestroy): Destroy a gangzone.
-- [GangZoneShowForPlayer](GangZoneShowForPlayer): Show a gangzone for a player.
-- [GangZoneShowForAll](GangZoneShowForAll): Show a gangzone for all players.
-- [GangZoneHideForPlayer](GangZoneHideForPlayer): Hide a gangzone for a player.
-- [GangZoneHideForAll](GangZoneHideForAll): Hide a gangzone for all players.
-- [GangZoneFlashForPlayer](GangZoneFlashForPlayer): Make a gangzone flash for a player.
-- [GangZoneFlashForAll](GangZoneFlashForAll): Make a gangzone flash for all players.
-- [GangZoneStopFlashForPlayer](GangZoneStopFlashForPlayer): Stop a gangzone flashing for a player.
-- [GangZoneStopFlashForAll](GangZoneStopFlashForAll): Stop a gangzone flashing for all players.
-- [IsValidGangZone](IsValidGangZone): Check if the gangzone valid.
-- [IsPlayerInGangZone](IsPlayerInGangZone): Check if the player in gangzone.
-- [IsGangZoneVisibleForPlayer](IsGangZoneVisibleForPlayer): Check if the gangzone is visible for player.
+- [GangZoneCreate](GangZoneCreate): Креира зону.
+- [GangZoneDestroy](GangZoneDestroy): Уништава зону.
+- [GangZoneShowForPlayer](GangZoneShowForPlayer): Приказује зону за играча.
+- [GangZoneShowForAll](GangZoneShowForAll): Приказује зону за све играче.
+- [GangZoneHideForPlayer](GangZoneHideForPlayer): Скрива зону за играча.
+- [GangZoneHideForAll](GangZoneHideForAll): Скрива зону за све играче.
+- [GangZoneFlashForPlayer](GangZoneFlashForPlayer): Узрокује да зона трепће за играча.
+- [GangZoneFlashForAll](GangZoneFlashForAll): Узрокује да зона трепће за све играче.
+- [GangZoneStopFlashForPlayer](GangZoneStopFlashForPlayer): Зауставља трептање зоне за играча.
+- [GangZoneStopFlashForAll](GangZoneStopFlashForAll): Зауставља трептање зоне за све играче.
+- [IsValidGangZone](IsValidGangZone): Проверава да ли је зона валидна.
+- [IsPlayerInGangZone](IsPlayerInGangZone): Проверава да ли је играч у зони.
+- [IsGangZoneVisibleForPlayer](IsGangZoneVisibleForPlayer): Проверава да ли је зона видљива за играча.

@@ -1,28 +1,30 @@
 ---
 title: argstr
 sidebar_label: argstr
-description: Get the string value of an argument by name.
+description: Добија стринг вредност аргумента по имену.
 tags: ["arguments", "args"]
 ---
 
-## Description
+## Опис
 
-Get the string value of an argument by name.
+Добија стринг вредност аргумента по имену.
 
-| Name                  | Description                                                       |
+| Име                  | Опис                                                       |
 | --------------------- | ----------------------------------------------------------------- |
-| skip = 0              | The number of arguments (with potentially the same name) to skip. |
-| const argument[] = "" | The name of the argument, including `-`s and `/`s.                |
-| value[] = ""          | The output string destination.                                    |
-| size = sizeof (value) | The size of the destination.                                      |
-| bool:pack = false     | Should the return value be packed?                                |
+| skip = 0              | Број аргумената (са потенцијално истим именом) које треба прескочити. |
+| const argument[] = "" | Име аргумента, укључујући `-` и `/` знакове.             |
+| value[] = ""          | Одредиште за излазни стринг.                                    |
+| size = sizeof (value) | 	Величина одредишта.                                      |
+| bool:pack = false     |Да ли треба да се враћена вредност пакује?                                |
 
-## Returns
+## Враћа
 
-**true** - the argument was found, **false** - it wasn't.
+**true** - аргумент је пронађен.
 
-## Related Functions
+**false** - није пронађен.
 
-- [argcount](argcount): Get the number of arguments passed to the script (those after --).
-- [argindex](argindex): Get the name of the argument at the given index after --.
-- [argvalue](argvalue): Get the number of arguments passed to the script (those after --).
+## Повезане функције
+
+- [argcount](argcount): Добија број аргумената који су прослеђени скрипти (они који су након --).
+- [argindex](argindex): Добија име аргумента на задатом индексу након --.
+- [argvalue](argvalue): Добија број аргумената који су прослеђени скрипти (они који су након --).

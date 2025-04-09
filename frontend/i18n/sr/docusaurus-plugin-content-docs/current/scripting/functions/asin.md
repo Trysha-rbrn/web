@@ -1,25 +1,25 @@
 ---
 title: asin
 sidebar_label: asin
-description: Get the inversed value of a sine in degrees.
+description: Добија инверзну вредност синуса у степенима.
 tags: ["math"]
 ---
 
-<LowercaseNote />
+<LowercaseNoteSR />
 
-## Description
+## Опис
 
-Get the inversed value of a sine in degrees. In trigonometrics, arc sine is the inverse operation of sine.
+Добија инверзну вредност синуса у степенима. У тригонометрији, арксинус је инверзна операција синуса.
 
-| Name        | Description                                                |
+| Име        | Опис                                                |
 | ----------- | ---------------------------------------------------------- |
-| Float:value | value whose arc sine is computed, in the interval [-1,+1]. |
+| Float:value | Вредност чији арксинус се рачуна, у интервалу [-1,+1]. |
 
-## Returns
+## Враћа
 
-The angle in degrees, in the interval [-90.0,+90.0].
+Угао у степенима, у интервалу [-90.0,+90.0].
 
-## Examples
+## Примери
 
 ```c
 //The arc sine of 0.500000 is 30.000000 degrees.
@@ -34,11 +34,11 @@ public OnGameModeInit()
 }
 ```
 
-## Related Functions
+## Повезане функције
 
-- [floatsin](floatsin): Get the sine from a specific angle.
-- [floatcos](floatcos): Get the cosine from a specific angle.
-- [floattan](floattan): Get the tangent from a specific angle.
-- [acos](acos): Get the inversed value of a cosine in degrees.
-- [atan](atan): Get the inversed value of a tangent in degrees.
-- [atan2](atan2): Get the multi-valued inversed value of a tangent in degrees.
+- [floatsin](floatsin): Добија синус из одређеног угла.
+- [floatcos](floatcos): Добија косинус из одређеног угла.
+- [floattan](floattan): Добија тангенту из одређеног угла.
+- [acos](acos): Добија инверзну вредност косинуса у степенима.
+- [atan](atan): Добија инверзну вредност тангента у степенима.
+- [atan2](atan2): Добија мулти-вредносну инверзну вредност тангента у степенима.

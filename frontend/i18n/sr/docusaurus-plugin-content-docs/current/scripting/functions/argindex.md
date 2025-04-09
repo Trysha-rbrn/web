@@ -1,33 +1,37 @@
 ---
 title: argindex
 sidebar_label: argindex
-description: Get the name of the argument at the given index after --.
+description: Добија име аргумента на задатом индексу након --.
 tags: ["arguments", "args"]
 ---
 
-## Description
+## Опис
 
-Get the name of the argument at the given index after **--**.
+Добија име аргумента на задатом индексу након **--**.
 
-| Name                  | Description                                     |
+## Параметри
+
+| Име                  | Опис                                     |
 | --------------------- | ----------------------------------------------- |
-| index                 | The naught-based offset to the script argument. |
-| value[]               | The output string destination.                  |
-| size = sizeof (value) | The size of the destination.                    |
-| bool:pack = false     | Should the return value be packed?              |
+| index                 | Индекс (базиран на нули) за аргумент у скрипти. |
+| value[]               | Одредиште за излазни стринг.                  |
+| size = sizeof (value) | Величина одредишта.                    |
+| bool:pack = false     | Да ли треба да се враћена вредност пакује?              |
 
-## Returns
+## Враћа
 
-**true** - the argument was found, **false** - it wasn't.
+**true** - аргумент је пронађен,
 
-## Notes
+**false** - није пронађен.
 
-Separate parameters also count for the index here.
+## Белешке
 
-For example with `--load test --run` the argument `--run` is index `2`.
+Различити параметри такође рачунају за индекс овде.
 
-## Related Functions
+На пример, са аргументима `--load test --run`, аргумент `--run` има индекс `2`. 
 
-- [argcount](argcount): Get the number of arguments passed to the script (those after --).
-- [argstr](argstr): Get the string value of an argument by name.
-- [argvalue](argvalue): Get the number of arguments passed to the script (those after --).
+## Повезане функције
+
+- [argcount](argcount):  Добија број аргумената који су прослеђени скрипти (они који су након --).
+- [argstr](argstr): Добија вредност аргумента као стринг по имену.
+- [argvalue](argvalue):Добија број аргумената који су прослеђени скрипти (они који су након --).

@@ -1,28 +1,28 @@
 ---
 title: BeginObjectEditing
 sidebar_label: BeginObjectEditing
-description: Allows a player to edit an object (position and rotation) using their mouse on a GUI (Graphical User Interface).
+description:  Омогућава играчу да уређује објекат (позицију и ротацију) користећи свој миш на графичком корисничком интерфејсу (GUI).
 tags: ["player", "object"]
 ---
 
-<VersionWarn version='omp v1.1.0.2612' />
+<VersionWarnSR version='omp v1.1.0.2612' />
 
-## Description
+## Опис
 
-Allows a player to edit an object (position and rotation) using their mouse on a GUI (Graphical User Interface).
+Омогућава играчу да уређује објекат (позицију и ротацију) користећи свој миш на графичком корисничком интерфејсу (GUI).
 
-| Name     | Description                                       |
+| Назив     | Опис                                       |
 | -------- | ------------------------------------------------- |
-| playerid | The ID of the player that should edit the object. |
-| objectid | The ID of the object to be edited by the player.  |
+| playerid | ID играча који треба да уреди објекат. |
+| objectid | 	ID објекта који играч треба да уреди.  |
 
-## Returns
+## Враћа
 
-`true` - The function executed successfully. Success is reported when a non-existent object is specified, but nothing will happen.
+`true` - Функција је успешно извршена. Успех се пријављује чак и када је наведени објекат неexistent, али се ништа неће десити.
 
-`false` - The function failed to execute. The player is not connected.
+`false` - Функција није успела да се изврши. Играч није повезан.
 
-## Examples
+## Примери
 
 ```c
 new objectid;
@@ -45,20 +45,20 @@ public OnPlayerCommandText(playerid, cmdtext[])
 }
 ```
 
-## Notes
+## Белешке
 
 :::tip
 
-You can move the camera while editing by pressing and holding the spacebar (or W in vehicle) and moving your mouse.
+Можете померити камеру током уређивања тако што ћете притиснути и држати `SPACE` (или W у возилу) и померати миш.
 
 :::
 
-## Related Functions
+## Повезане Функције
 
-- [CreateObject](CreateObject): Create an object.
-- [DestroyObject](DestroyObject): Destroy an object.
-- [MoveObject](MoveObject): Move an object.
-- [BeginPlayerObjectEditing](BeginPlayerObjectEditing): Edit an object.
-- [EditAttachedObject](EditAttachedObject): Edit an attached object.
-- [BeginObjectSelecting](BeginObjectSelecting): Select an object.
-- [EndObjectEditing](EndObjectEditing): Cancel the edition of an object.
+- [CreateObject](CreateObject): Креира објекат.
+- [DestroyObject](DestroyObject): Уништава објекат.
+- [MoveObject](MoveObject): Помера објекат.
+- [BeginPlayerObjectEditing](BeginPlayerObjectEditing): Уреди објекат.
+- [EditAttachedObject](EditAttachedObject): Уреди прикачени објекат.
+- [BeginObjectSelecting](BeginObjectSelecting): Изабери објекат.
+- [EndObjectEditing](EndObjectEditing): Откажи уређивање објекта.

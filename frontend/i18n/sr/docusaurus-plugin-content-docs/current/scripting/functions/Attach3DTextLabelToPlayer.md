@@ -1,29 +1,29 @@
 ---
 title: Attach3DTextLabelToPlayer
 sidebar_label: Attach3DTextLabelToPlayer
-description: Attach a 3D text label to a player.
+description:  Прикачи 3D текст етикету на играча.
 tags: ["player", "3dtextlabel"]
 ---
 
-## Description
+## Опис
 
-Attach a 3D text label to a player.
+Прикачи 3D текст етикету на играча.
 
-| Name          | Description                                                           |
+| Назив          | Опис                                                           |
 | ------------- | --------------------------------------------------------------------- |
-| Text3D:textid | The ID of the 3D text label to attach. Returned by Create3DTextLabel. |
-| playerid      | The ID of the player to attach the label to.                          |
-| Float:offsetX | The X offset from the player.                                         |
-| Float:offsetY | The Y offset from the player.                                         |
-| Float:offsetZ | The Z offset from the player.                                         |
+| Text3D:textid | ID 3D текст етикете коју треба прикачити. Враћа се из Create3DTextLabel. |
+| playerid      | 	ID играча на који треба прикачити етикету.                          |
+| Float:offsetX | X офсет у односу на играча.                                         |
+| Float:offsetY | Y офсет у односу на играча.                                         |
+| Float:offsetZ | Z офсет у односу на играча.                                         |
 
-## Returns
+## Враћа
 
-**true** - The function executed successfully.
+**true** - Функција је успешно извршена.
 
-**false** - The function failed to execute. This means the player and/or label do not exist.
+**false** - Функција није успела да се изврши. То значи да играч и/или етикета не постоје.
 
-## Examples
+## Примери
 
 ```c
 public OnPlayerConnect(playerid)
@@ -34,13 +34,13 @@ public OnPlayerConnect(playerid)
 }
 ```
 
-## Related Functions
+## Повезане функције
 
-- [Create3DTextLabel](Create3DTextLabel): Create a 3D text label.
-- [Delete3DTextLabel](Delete3DTextLabel): Delete a 3D text label.
-- [Get3DTextLabelAttachedData](Get3DTextLabelAttachedData): Gets the 3D text label attached data.
-- [Attach3DTextLabelToVehicle](Attach3DTextLabelToVehicle): Attach a 3D text label to a vehicle.
-- [Update3DTextLabelText](Update3DTextLabelText): Change the text of a 3D text label.
-- [CreatePlayer3DTextLabel](CreatePlayer3DTextLabel): Create A 3D text label for one player.
-- [DeletePlayer3DTextLabel](DeletePlayer3DTextLabel): Delete a player's 3D text label.
-- [UpdatePlayer3DTextLabelText](UpdatePlayer3DTextLabelText): Change the text of a player's 3D text label.
+- [Create3DTextLabel](Create3DTextLabel): Креира 3D текст етикету.
+- [Delete3DTextLabel](Delete3DTextLabel): Брише 3D текст етикету.
+- [Get3DTextLabelAttachedData](Get3DTextLabelAttachedData): Враћа податке о прикаченој 3D текст етикети.
+- [Attach3DTextLabelToVehicle](Attach3DTextLabelToVehicle): Прикачи 3D текст етикету на возило.
+- [Update3DTextLabelText](Update3DTextLabelText): Мења текст 3D текст етикете.
+- [CreatePlayer3DTextLabel](CreatePlayer3DTextLabel): Креира 3D текст етикету за једног играча.
+- [DeletePlayer3DTextLabel](DeletePlayer3DTextLabel): Брише 3D текст етикету играча.
+- [UpdatePlayer3DTextLabelText](UpdatePlayer3DTextLabelText): Мења текст 3D текст етикете играча.

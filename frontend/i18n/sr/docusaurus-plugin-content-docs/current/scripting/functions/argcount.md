@@ -1,20 +1,20 @@
 ---
 title: argcount
 sidebar_label: argcount
-description: Get the number of arguments passed to the script (those after --).
+description: Добија број аргумената који су прослеђени скрипти (они који су након --).
 tags: ["arguments", "args"]
 ---
 
-## Description
+## Опис
 
-Get the number of arguments passed to the script (those after **--**).
+Добија број аргумената који су прослеђени скрипти (они који су након **--**).
 
-## Returns
+## Враћа
 
-The number of arguments passed directly to the script.
+Број аргумената који су директно прослеђени скрипти.
 
 ## Related Functions
 
-- [argindex](argindex): Get the name of the argument at the given index after --.
-- [argstr](argstr): Get the string value of an argument by name.
-- [argvalue](argvalue): Get the number of arguments passed to the script (those after --).
+- [argindex](argindex): Добија име аргумента на одређеном индексу након --.
+- [argstr](argstr): Добија вредност аргумента као стринг по имену.
+- [argvalue](argvalue): Добија број аргумената који су прослеђени скрипти (они који су након --).

@@ -1,29 +1,31 @@
 ---
 title: AllowAdminTeleport
 sidebar_label: AllowAdminTeleport
-description: This function will determine whether RCON admins will be teleported to their waypoint when they set one.
+description: Ова функција одређује да ли ће RCON админи бити телепортовани до своје ознаке (waypoint) када је поставе.
 tags: []
 ---
 
 :::warning
 
-This function, as of 0.3d, is deprecated. Please see [OnPlayerClickMap](../callbacks/OnPlayerClickMap).
+Ова функција је, почев од верзије 0.3d, застарела. Погледај [OnPlayerClickMap](../callbacks/OnPlayerClickMap).
 
 :::
 
-## Description
+## Опис
 
-This function will determine whether RCON admins will be teleported to their waypoint when they set one.
+Ова функција одређује да ли ће RCON админи бити телепортовани на свој waypoint када га поставе.
 
-| Name       | Description                              |
+## Параметри
+
+| Назив       | Опис                              |
 | ---------- | ---------------------------------------- |
-| bool:allow | 'false' to disable and 'true' to enable. |
+| bool:allow | **false** за онемогућавање, **true** за омогућавање. |
 
-## Returns
+## Враћа
 
-This function does not return any specific values.
+Ова функција не враћа никакве специфичне вредности.
 
-## Examples
+## Примери
 
 ```c
 public OnGameModeInit()
@@ -34,8 +36,8 @@ public OnGameModeInit()
 }
 ```
 
-## Related Functions
+## Повезане функције
 
-- [IsAdminTeleportAllowed](IsAdminTeleportAllowed): Checks if the RCON admins allowed to teleport by right-clicking on the map.
-- [IsPlayerAdmin](IsPlayerAdmin): Checks if a player is logged into RCON.
-- [AllowPlayerTeleport](AllowPlayerTeleport): Toggle waypoint teleporting for players.
+- [IsAdminTeleportAllowed](IsAdminTeleportAllowed): Проверава да ли је омогућен teleport за RCON администраторе кликом на мапу.
+- [IsPlayerAdmin](IsPlayerAdmin): Проверава да ли је играч пријављен као RCON админ.
+- [AllowPlayerTeleport](AllowPlayerTeleport): Омогућава или онемогућава teleport путем waypoint-а за играче.

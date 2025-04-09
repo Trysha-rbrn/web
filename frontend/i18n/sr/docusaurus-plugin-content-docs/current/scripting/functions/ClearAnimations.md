@@ -1,24 +1,26 @@
 ---
 title: ClearAnimations
 sidebar_label: ClearAnimations
-description: Clears all animations for the given player (it also cancels all current tasks such as jetpacking, parachuting, entering vehicles, driving (removes player out of vehicle), swimming, etc).
+description: Брише све анимације за датог играча (такође отказује све тренутне задатке као што су коришћење ракетног ранца, парашутирање, улазак у возила, вожња (избацује играча из возила), пливање и други).
 tags: ["player", "animation"]
 ---
 
-## Description
+## Опис
 
-Clears all animations for the given player (it also cancels all current tasks such as jetpacking, parachuting, entering vehicles, driving (removes player out of vehicle), swimming, etc).
+Брише све анимације за датог играча (такође отказује све тренутне задатке као што су коришћење ракетног ранца, парашутирање, улазак у возила, вожња (избацује играча из возила), пливање и други).
 
-| Name                 | Description                                                                                                          |
+## Параметри
+
+| Назив                 | Опис                                                                                                          |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| playerid             | The ID of the player to clear the animations of.                                                                     |
-| FORCE_SYNC:forceSync | Set to `SYNC_ALL` to force playerid to sync the animation with other players in streaming radius (default=SYNC_NONE) |
+| playerid             | ID играча чије анимације треба обрисати.                                                                     |
+| FORCE_SYNC:forceSync | Поставите на `SYNC_ALL` да бисте принудили да се анимација синхронизује са другим играчима у радијусу стримовања (подразумевано=SYNC_NONE). |
 
-## Returns
+## Враћа
 
-This function always returns **true**, even when the player specified is not connected.
+Ова функција увек враћа true, чак и када наведени играч није повезан.
 
-## Examples
+## Примери
 
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
@@ -32,20 +34,20 @@ public OnPlayerCommandText(playerid, cmdtext[])
 }
 ```
 
-## Notes
+## Белешке
 
 :::tip
 
-ClearAnimations doesn't do anything when the animation ends if we pass 'true' for the freeze parameter in ApplyAnimation.
+`ClearAnimations` не ради ништа када анимација заврши ако преносимо **true** као параметар за параметар за замрзавање у функцији `ApplyAnimation`.
 
 :::
 
 :::tip
 
-Unlike some other ways to remove player from a vehicle, this will also reset the vehicle's velocity to zero, instantly stopping the car. Player will appear on top of the vehicle with the same location as he was in his car seat.
+За разлику од неких других начина да се играч избаци из возила, ова функција такође враћа брзину возила на нулу, одмах заустављајући аутомобил. Играч ће се појавити на врху возила, на истом месту где је био у свом седишту.
 
 :::
 
-## Related Functions
+## Повезане функције
 
-- [ApplyAnimation](ApplyAnimation): Apply an animation to a player.
+- [ApplyAnimation](ApplyAnimation): Примењује анимацију на играча.

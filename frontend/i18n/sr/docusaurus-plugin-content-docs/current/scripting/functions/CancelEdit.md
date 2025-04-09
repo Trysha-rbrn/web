@@ -1,21 +1,21 @@
 ---
 title: CancelEdit
 sidebar_label: CancelEdit
-description: Cancel object edition mode for a player.
+description: Отказује режим уређивања објекта за играча.
 tags: []
 ---
 
-## Description
+## Опис
 
-Cancel object edition mode for a player
+Отказује режим уређивања објекта за играча.
 
-| Name     | Description                                |
+| Назив   | Опис                                |
 | -------- | ------------------------------------------ |
-| playerid | The ID of the player to cancel edition for |
+| playerid | 	ID играча за кога се отказује режим уређивања. |
 
-## Returns
+## Враћа
 
-This function does not return any specific values.
+Ова функција не враћа никакве специфичне вредности.
 
 ## Examples
 
@@ -32,12 +32,12 @@ public OnPlayerCommandText(playerid, cmdtext[])
 }
 ```
 
-## Related Functions
+## Повезане функције
 
-- [SelectObject](SelectObject): Select an object.
-- [EditObject](EditObject): Edit an object.
-- [EditPlayerObject](EditPlayerObject): Edit an object.
-- [EditAttachedObject](EditAttachedObject): Edit an attached object.
-- [CreateObject](CreateObject): Create an object.
-- [DestroyObject](DestroyObject): Destroy an object.
-- [MoveObject](MoveObject): Move an object.
+- [SelectObject](SelectObject): Избор објекта.
+- [EditObject](EditObject): Уређивање објекта.
+- [EditPlayerObject](EditPlayerObject): Уређивање објекта.
+- [EditAttachedObject](EditAttachedObject): Уређивање прикљученог објекта. 
+- [CreateObject](CreateObject): Креирање објекта.
+- [DestroyObject](DestroyObject): Уништавање објекта.
+- [MoveObject](MoveObject): Померање објекта.

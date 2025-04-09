@@ -1,33 +1,35 @@
 ---
 title: UpdateVehicleDamageStatus
 sidebar_label: UpdateVehicleDamageStatus
-description: Sets the various visual damage statuses of a vehicle, such as popped tires, broken lights and damaged panels.
+description: Поставља различите визуелне статусе оштећења возила, као што су прснуте гуме, покварена светла и оштећене панели.
 tags: ["vehicle"]
 ---
 
 :::tip
 
-For some useful functions for working with vehicle damage values, see [here](../resources/damagestatus).
+За неке корисне функције за рад са вредностима оштећења возила, погледајте [овде](../resources/damagestatus).
 
 :::
 
-## Description
+## Опис
 
-Sets the various visual damage statuses of a vehicle, such as popped tires, broken lights and damaged panels.
+Поставља различите визуелне статусе оштећења возила, као што су прснуте гуме, покварена светла и оштећене панели.
 
-| Name                        | Description                                       |
+## Параметри
+
+| Назив                        | Опис                                       |
 | --------------------------- | ------------------------------------------------- |
-| vehicleid                   | The ID of the vehicle to set the damage of.       |
-| VEHICLE_PANEL_STATUS:panels | A set of bits containing the panel damage status. |
-| VEHICLE_DOOR_STATUS:doors   | A set of bits containing the door damage status.  |
-| VEHICLE_LIGHT_STATUS:lights | A set of bits containing the light damage status. |
-| VEHICLE_TIRE_STATUS:tires   | A set of bits containing the tire damage status.  |
+| vehicleid                   | ID возила за које се поставља оштећење.       |
+| VEHICLE_PANEL_STATUS:panels | Скуп битова који садржи статус оштећења панела. |
+| VEHICLE_DOOR_STATUS:doors   | Скуп битова који садржи статус оштећења врата.  |
+| VEHICLE_LIGHT_STATUS:lights | Скуп битова који садржи статус оштећења светала. |
+| VEHICLE_TIRE_STATUS:tires   | 	Скуп битова који садржи статус оштећења гума.  |
 
-## Returns
+## Враћа
 
-This function does not return any specific values.
+Ова функција не враћа никакве специфичне вредности.
 
-## Examples
+## Примери
 
 ```c
 new 
@@ -46,19 +48,22 @@ tires = (VEHICLE_TIRE_STATUS_FRONT_LEFT_POPPED | VEHICLE_TIRE_STATUS_FRONT_RIGHT
 UpdateVehicleDamageStatus(vehicleid, panels, doors, lights, tires);
 ```
 
-## Related Functions
+## Повезане Функције
 
-- [SetVehicleHealth](SetVehicleHealth): Set the health of a vehicle.
-- [GetVehicleHealth](GetVehicleHealth): Check the health of a vehicle.
-- [RepairVehicle](RepairVehicle): Fully repair a vehicle.
-- [GetVehicleDamageStatus](GetVehicleDamageStatus): Get the vehicle damage state for each part individually.
+- [SetVehicleHealth](SetVehicleHealth): Поставља здравље возила.
+- [GetVehicleHealth](GetVehicleHealth): Проверите здравље возила.
+- [RepairVehicle](RepairVehicle): Потпуно поправља возило.
+- [GetVehicleDamageStatus](GetVehicleDamageStatus): Добија стање оштећења возила за сваки део појединачно.
 
-## Related Callbacks
+## Повезани Повратни Позиви
 
-- [OnVehicleDamageStatusUpdate](../callbacks/OnVehicleDamageStatusUpdate): Called when a vehicle's damage state changes.
+- [OnVehicleDamageStatusUpdate](../callbacks/OnVehicleDamageStatusUpdate): Позива се када се статус оштећења возила промени.
 
-## Related Resources
-
+## Повезани Ресурси
+<!--Mrzelo me da prevodim jbg..
+Takodje treba umesto Povratnih poziva svugde da se pise povratne funkcije :)
+God help me please >.<>
+-->
 - [Damage Status](../resources/damagestatus)
 - [Vehicle Panel Status](../resources/vehicle-panel-status)
 - [Vehicle Door Status](../resources/vehicle-door-status)

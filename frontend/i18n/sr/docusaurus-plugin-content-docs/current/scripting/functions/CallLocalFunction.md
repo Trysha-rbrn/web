@@ -1,38 +1,40 @@
 ---
 title: CallLocalFunction
 sidebar_label: CallLocalFunction
-description: Calls a public function from the script in which it is used.
+description: Позива јавну функцију из скрипте у којој се користи.
 tags: ["core"]
 ---
 
-## Description
+## Опис
 
-Calls a public function from the script in which it is used.
+Позива јавну функцију из скрипте у којој се користи.
 
-| Name                 | Description                                 |
+## Параметри
+
+| Име                 | Опис                                 |
 | -------------------- | ------------------------------------------- |
-| const functionName[] | Public function's name.                     |
-| const specifiers[]   | Tag/format of each variable                 |
-| OPEN_MP_TAGS:...     | 'Indefinite' number of arguments of any tag |
+| const functionName[] | Име јавне функције.                     |
+| const specifiers[]   | Ознака/формат сваке променљиве.                 |
+| OPEN_MP_TAGS:...     | 'Неограничен' број аргумената било које ознаке. |
 
-## Returns
+## Враћа
 
-If the function exists, returns the same as the called function.
+Ако функција постоји, враћа исто као и позвана функција.
 
-If the function does not exist, returns 0.
+Ако функција не постоји, враћа 0.
 
-## Format Specifiers
+## Форматске Ознаке
 
-| **Placeholder** | **Meaning**                                                                                                                                                                                                                                                                                   |
+| **Задњи знак** | **Значење**                                                                                                                                                                                                                                                                                   |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `a`             | Passes an array (the next placeholder should be d or i for the array size, so the function will be aware of it).<br/><br/>**NOTE**: It accepts only one dimension, so a trick like sizeof (array) + sizeof (array) \* sizeof (array[]) for the array size would be needed to pass a 2D array. |
-| `c`             | Passes a single character.                                                                                                                                                                                                                                                                    |
-| `d`,`i`         | Passes an integer (whole) number.                                                                                                                                                                                                                                                             |
-| `x`             | Passes a number in hexadecimal notation.                                                                                                                                                                                                                                                      |
-| `f`             | Passes a floating point number.                                                                                                                                                                                                                                                               |
-| `s`             | Passes a string.                                                                                                                                                                                                                                                                              |
+| `a`             | Прелази низ (следећа ознака треба да буде d или i за величину низа, како би функција била свесна тога).<br/><br/>**НАПОМЕНА**: Прихвата само једнодимензионалне низове, па ће бити потребно користити трик као што је sizeof (array) + sizeof (array) \* sizeof (array[]) за прелазак 2Д низа. |
+| `c`             | Прелази један карактер.                                                                                                                                                                                                                                                                    |
+| `d`,`i`         | Прелази цео број (целобројни).                                                                                                                                                                                                                                                             |
+| `x`             | Прелази број у хексадецималном формату.                                                                                                                                                                                                                                                      |
+| `f`             | Прелази број са покретном запетом.                                                                                                                                                                                                                                                               |
+| `s`             | Прелази низ знакова.                                                                                                                                                                                                                                                                              |
 
-## Examples
+## Примери
 
 ```c
 forward publicFunc(number, Float:flt, const string[]);
@@ -45,14 +47,14 @@ public publicFunc(number, Float:flt, const string[])
 CallLocalFunction("publicFunc", "ifs", 420, 68.999999999, "Hello world");
 ```
 
-## Notes
+## Белешке
 
 :::warning
 
-CallLocalFunction crashes the server if it's passing an empty string. (Fixed in open.mp)
+CallLocalFunction изазива пад сервера ако прелази празан низ. (Решено у open.mp)
 
 :::
 
 ## Related Functions
 
-- [CallRemoteFunction](CallRemoteFunction): Call a function in any loaded script.
+- [CallRemoteFunction](CallRemoteFunction): Позива функцију у било којој учитаној скрипти.

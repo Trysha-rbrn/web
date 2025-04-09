@@ -1,44 +1,44 @@
 ---
 title: AllowInteriorWeapons
 sidebar_label: AllowInteriorWeapons
-description: Toggle whether the usage of weapons in interiors is allowed or not.
+description: Омогућава или онемогућава употребу оружја у interior-има.
 tags: []
 ---
 
-## Description
+## Опис
 
-Toggle whether the usage of weapons in interiors is allowed or not.
+Омогућава или онемогућава употребу оружја у interior-има.
 
-| Name       | Description                                                                                          |
+| Назив       | Опис                                                                                          |
 | ---------- | ---------------------------------------------------------------------------------------------------- |
-| bool:allow | 'true' to enable weapons in interiors (enabled by default), 'false' to disable weapons in interiors. |
+| bool:allow | **true** – омогућава оружје у interior-има (подразумевано укључено), **false** – онемогућава га. |
 
-## Returns
+## Враћа
 
-This function does not return any specific values.
+Ова функција не враћа никакве специфичне вредности.
 
-## Examples
+## Примери
 
 ```c
 public OnGameModeInit()
 {
-    // This will allow weapons inside interiors.
+    // Ово ће омогућити употребу оружја у interior-има.
     AllowInteriorWeapons(true);
     return 1;
 }
 ```
 
-## Notes
+## Белешке
 
 :::warning
 
-This function does not work in the current SA:MP version!
+Ова функција тренутно не ради у актуелној верзији SA:MP-а!
 
 :::
 
 :::tip
 
-You can also toggle interior weapons via [config.json](../../server/config.json)
+Могуће је укључити или искључити оружје у interior-има и преко фајла [config.json](../../server/config.json)
 
 ```json
 "allow_interior_weapons": true,
@@ -46,12 +46,12 @@ You can also toggle interior weapons via [config.json](../../server/config.json)
 
 :::
 
-## Related Functions
+## Повезане функције
 
-- [AreInteriorWeaponsAllowed](AreInteriorWeaponsAllowed): Can weapons be used in interiors?
-- [SetPlayerInterior](SetPlayerInterior): Set a player's interior.
-- [GetPlayerInterior](GetPlayerInterior): Get the current interior of a player.
+- [AreInteriorWeaponsAllowed](AreInteriorWeaponsAllowed): Да ли је дозвољено користити оружје у interior-има?
+- [SetPlayerInterior](SetPlayerInterior): Поставља interior за играча.
+- [GetPlayerInterior](GetPlayerInterior): Враћа тренутни interior играча.
 
-## Related Callbacks
+## Повезане повратне функције
 
-- [OnPlayerInteriorChange](../callbacks/OnPlayerInteriorChange): Called when a player changes interior.
+- [OnPlayerInteriorChange](../callbacks/OnPlayerInteriorChange): Позива се када играч промени interior.

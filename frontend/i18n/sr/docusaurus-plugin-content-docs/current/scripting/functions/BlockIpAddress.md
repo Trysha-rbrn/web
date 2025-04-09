@@ -1,24 +1,26 @@
 ---
 title: BlockIpAddress
 sidebar_label: BlockIpAddress
-description: Blocks an IP address from further communication with the server for a set amount of time (with wildcards allowed).
+description: Блокира IP адресу од даљње комуникације са сервером на одређени период (дозвољене су замене знакова).
 tags: ["ip address"]
 ---
 
-## Description
+## Опис
 
-Blocks an IP address from further communication with the server for a set amount of time (with wildcards allowed). Players trying to connect to the server with a blocked IP address will receive the generic "You are banned from this server." message. Players that are online on the specified IP before the block will timeout after a few seconds and, upon reconnect, will receive the same message.
+Блокира IP адресу од даљње комуникације са сервером на одређени период (дозвољене су замене знакова). Играчи који покушају да се конектују на сервер са блокираном IP адресом добиће поруку "You are banned from this server." (Забрањено вам је приступање овом серверу). Играчи који су онлајн на наведену IP адресу пре блокаде биће одмах искључени, а након поновног приповезивања добиће исту поруку.
 
-| Name              | Description                                                                                                |
+## Параметри
+
+| Име              | Опис                                                                                                |
 | ----------------- | ---------------------------------------------------------------------------------------------------------- |
-| const ipAddress[] | The IP to block.                                                                                           |
-| timeMS            | The time (in milliseconds) that the connection will be blocked for. 0 can be used for an indefinite block. |
+| const ipAddress[] | IP адреса која ће бити блокирана.                                                                                           |
+| timeMS            | IP адреса која ће бити блокирана. |
 
-## Returns
+## Враћа
 
-This function does not return any specific values.
+Ова функција не враћа специфичне вредности.
 
-## Examples
+## Примери
 
 ```c
 public OnRconLoginAttempt(ip[], password[], success)
@@ -31,20 +33,20 @@ public OnRconLoginAttempt(ip[], password[], success)
 }
 ```
 
-## Notes
+## Белешке
 
 :::tip
 
-Wildcards can be used with this function, for example blocking the IP '6.9._._' will block all IPs where the first two octets are 6 and 9 respectively. Any number can be in place of an asterisk.
+Замене знакова могу се користити са овом функцијом, на пример блокирање IP адресе '6.9._._' ће блокирати све IP адресе где су прва два октета 6 и 9. Било који број може бити на месту астериска.
 
 :::
 
-## Related Functions
+## Повезане Функције
 
-- [UnBlockIpAddress](UnBlockIpAddress): Unblock an IP that was previously blocked.
-- [IsBanned](IsBanned): Checks if the given IP address is banned.
+- [UnBlockIpAddress](UnBlockIpAddress): Одблокирај IP адресу која је претходно била блокирана.
+- [IsBanned](IsBanned): Проверава да ли је дата IP адреса банована.
 
-## Related Callbacks
+## Повезане повратне функције
 
-- [OnRconLoginAttempt](../callbacks/OnRconLoginAttempt): Called when someone attempts to log in to RCON in-game.
-- [OnIncomingConnection](../callbacks/OnIncomingConnection): Called when a player is attempting to connect to the server.
+- [OnRconLoginAttempt](../callbacks/OnRconLoginAttempt): Позива се када неко покуша да се пријави на RCON у игри.
+- [OnIncomingConnection](../callbacks/OnIncomingConnection): Позива се када играч покушава да се повеже са сервером.

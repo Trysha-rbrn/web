@@ -1,32 +1,32 @@
 ---
 title: atan
 sidebar_label: atan
-description: Get the multi-valued inversed value of a tangent in degrees.
+description: Добија мулти-вредносну инверзну вредност тангента у степенима.
 tags: ["math"]
 ---
 
-<LowercaseNote />
+<LowercaseNoteSR />
 
 :::warning
 
-Notice that the y-value is the first parameter and the x-value is the second parameter. This is because the mathematical notation is y/x (i.e. y divided by x) and the convention is to write the operands in the order of the operation that is performed on them.
+Обратите пажњу да је y-вредност први параметар, а x-вредност други параметар. Ово је зато што је математичка нотација y/x (тј. y подељено са x), а конвенција је да се операнди пишу у редоследу операције која се на њима врши.
 
 :::
 
-## Description
+## Опис
 
-Get the multi-valued inversed value of a tangent in degrees. In trigonometrics, arc tangent is the inverse operation of tangent. To compute the value, the function takes into account the sign of both arguments in order to determine the quadrant.
+Добија мулти-вредносну инверзну вредност тангента у степенима. У тригонометрији, арктангенус је инверзна операција тангента. Да би се израчунала вредност, функција узима у обзир знак оба аргумента како би одредила квадрант.
 
-| Name    | Description                                            |
+| Име    | Опис                                            |
 | ------- | ------------------------------------------------------ |
-| Float:y | value representing the proportion of the y-coordinate. |
-| Float:x | value representing the proportion of the x-coordinate. |
+| Float:y | Вредност која представља пропорцију y-координате. |
+| Float:x | Вредност која представља пропорцију x-координате. |
 
-## Returns
+## Враћа
 
-The angle in degrees, in the interval [-180.0,+180.0].
+Угао у степенима, у интервалу [-180.0,+180.0].
 
-## Examples
+## Пример
 
 ```c
 //The arc tangent for (x=-10.000000, y=10.000000) is 135.000000 degrees.
@@ -44,9 +44,9 @@ public OnGameModeInit()
 
 ## Related Functions
 
-- [floatsin](floatsin): Get the sine from a specific angle.
-- [floatcos](floatcos): Get the cosine from a specific angle.
-- [floattan](floattan): Get the tangent from a specific angle.
-- [asin](asin): Get the inversed value of a sine in degrees.
-- [acos](acos): Get the inversed value of a cosine in degrees.
-- [atan](atan): Get the inversed value of a tangent in degrees.
+- [floatsin](floatsin): Добија синус из одређеног угла.
+- [floatcos](floatcos): Добија косинус из одређеног угла.
+- [floattan](floattan): Добија тангенту из одређеног угла.
+- [asin](asin): Добија инверзну вредност синуса у степенима.
+- [acos](acos): Добија инверзну вредност косинуса у степенима.
+- [atan](atan): Добија инверзну вредност тангента у степенима.

@@ -1,25 +1,25 @@
 ---
 title: atan
 sidebar_label: atan
-description: Get the inversed value of a tangent in degrees.
+description: Добија инверзну вредност тангента у степенима.
 tags: ["math"]
 ---
 
-<LowercaseNote />
+<LowercaseNoteSR />
 
-## Description
+## Опис
 
-Get the inversed value of a tangent in degrees. In trigonometrics, arc tangent is the inverse operation of tangent. Notice that because of the sign ambiguity, the function cannot determine with certainty in which quadrant the angle falls only by its tangent value. See [atan2](atan2) for an alternative that takes a fractional argument instead.
+Добија инверзну вредност тангента у степенима. У тригонометрији, арктангенус је инверзна операција тангента. Пазите да због амбигвитетности знака, функција не може са сигурношћу одредити у којем квадранту угао пада само на основу његове вредности тангента. Погледајте [atan2](atan2) као алтернативу која узима и разломну вредност као аргумент.
 
-| Name        | Description                          |
+| Назив        | Опис                          |
 | ----------- | ------------------------------------ |
-| Float:value | value whose arc tangent is computed. |
+| Float:value | 	Вредност чији арктангенус се рачуна. |
 
-## Returns
+## Враћа
 
-The angle in degrees, in the interval [-90.0,+90.0].
+Угао у степенима, у интервалу [-90.0,+90.0].
 
-## Examples
+## Примери
 
 ```c
 //The arc tangent of 1.000000 is 45.000000 degrees.
@@ -34,11 +34,11 @@ public OnGameModeInit()
 }
 ```
 
-## Related Functions
+## Повезане функције
 
-- [floatsin](floatsin): Get the sine from a specific angle.
-- [floatcos](floatcos): Get the cosine from a specific angle.
-- [floattan](floattan): Get the tangent from a specific angle.
-- [asin](asin): Get the inversed value of a sine in degrees.
-- [acos](acos): Get the inversed value of a cosine in degrees.
-- [atan2](atan2): Get the multi-valued inversed value of a tangent in degrees.
+- [floatsin](floatsin): Добија синус из одређеног угла.
+- [floatcos](floatcos): Добија косинус из одређеног угла.
+- [floattan](floattan): Добија тангенту из одређеног угла.
+- [asin](asin): Добија инверзну вредност синуса у степенима.
+- [acos](acos): Добија инверзну вредност косинуса у степенима.
+- [atan2](atan2): Добија мулти-вредносну инверзну вредност тангента у степенима.

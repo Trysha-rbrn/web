@@ -1,30 +1,32 @@
 ---
 title: AllowPlayerTeleport
 sidebar_label: AllowPlayerTeleport
-description: Enable/Disable the teleporting ability for a player by right-clicking on the map.
+description: Омогућава или онемогућава могућност телепортације играча десним кликом на мапу.
 tags: ["player"]
 ---
 
 :::warning
 
-This function, as of 0.3d, is deprecated. Check [OnPlayerClickMap](../callbacks/OnPlayerClickMap).
+Ова функција је, почев од верзије 0.3d, застарела. Погледај [OnPlayerClickMap](../callbacks/OnPlayerClickMap).
 
 :::
 
-## Description
+## Опис
 
-Enable/Disable the teleporting ability for a player by right-clicking on the map
+Омогућава или онемогућава могућност телепортације играча десним кликом на мапу.
 
-| Name       | Description                              |
+## Параметри
+
+| Назив       | Опис                              |
 | ---------- | ---------------------------------------- |
-| playerid   | The ID of the player to allow teleport.  |
-| bool:allow | 'false' to disallow and 'true' to allow. |
+| playerid   | 	ID играча коме се дозвољава телепортација.  |
+| bool:allow | **false** – онемогућава, **true** – омогућава. |
 
-## Returns
+## Враћа
 
-This function does not return any specific values.
+Ова функција не враћа никакве специфичне вредности.
 
-## Examples
+## Примери
 
 ```c
 public OnPlayerConnect(playerid)
@@ -36,15 +38,15 @@ public OnPlayerConnect(playerid)
 }
 ```
 
-## Notes
+## Белешке
 
 :::warning
 
-This function will work only if [AllowAdminTeleport](AllowAdminTeleport) is enabled, and you have to be an admin.
+Ова функција ради само ако је [AllowAdminTeleport](AllowAdminTeleport) омогућен, и морате бити администратор.
 
 :::
 
-## Related Functions
+## Повезане функције
 
-- [IsPlayerTeleportAllowed](IsPlayerTeleportAllowed): Can this player teleport by right-clicking on the map?
-- [AllowAdminTeleport](AllowAdminTeleport): Toggle waypoint teleporting for RCON admins.
+- [IsPlayerTeleportAllowed](IsPlayerTeleportAllowed): Да ли играч може да се телепортује десним кликом на мапу?
+- [AllowAdminTeleport](AllowAdminTeleport): Омогућава телепортацију администраторима путем мапе.

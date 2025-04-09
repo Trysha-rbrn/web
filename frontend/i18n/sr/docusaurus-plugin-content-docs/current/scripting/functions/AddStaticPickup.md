@@ -1,30 +1,32 @@
 ---
 title: AddStaticPickup
 sidebar_label: AddStaticPickup
-description: This function adds a 'static' pickup to the game.
+description: Ова функција додаје 'статички' pickup у игру.
 tags: ["pickup"]
 ---
 
-## Description
+## Опис
 
-This function adds a 'static' pickup to the game. These pickups support weapons, health, armor etc., with the ability to function without scripting them (weapons/health/armor will be given automatically).
+Ова функција додаје 'статички' pickup у игру. Ови pickup-и подржавају оружја, здравље, оклоп итд., и функционишу без потребе за додатним скриптирањем (оружје/здравље/оклоп се дају аутоматски).
 
-| Name                             | Description                                                                         |
+## Параметри
+
+| Назив                             | Опис                                                                         |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
-| [model](../resources/pickupids)  | The model of the pickup.                                                            |
-| [type](../resources/pickuptypes) | The pickup type. Determines how the pickup responds when picked up.                 |
-| Float:x                          | The X coordinate to create the pickup at.                                           |
-| Float:y                          | The Y coordinate to create the pickup at.                                           |
-| Float:z                          | The Z coordinate to create the pickup at.                                           |
-| virtualWorld                     | The virtual world ID to put tht pickup in. Use -1 to show the pickup in all worlds. |
+| [model](../resources/pickupids)  | Модел pickup-а.                                                            |
+| [type](../resources/pickuptypes) | Тип pickup-а. Одређује како ће се понашати када га играч покупи.                 |
+| Float:x                          | X координата на којој се pickup креира.                                           |
+| Float:y                          | 	Y координата на којој се pickup креира.                                           |
+| Float:z                          | Z координата на којој се pickup креира.                                           |
+| virtualWorld                     | ID виртуелног света у који се поставља pickup. Користити -1 за све светове. |
 
-## Returns
+## Враћа
 
-**1** - if the pickup is successfully created.
+**1** - ако је pickup успешно креиран.
 
-**0** - if failed to create.
+**0** - ако креирање није успело.
 
-## Examples
+## Примери
 
 ```c
 public OnGameModeInit()
@@ -39,19 +41,19 @@ public OnGameModeInit()
 }
 ```
 
-## Notes
+## Белешке
 
 :::tip
 
-This function doesn't return a pickup ID that you can use in, for example, OnPlayerPickUpPickup. Use [CreatePickup](CreatePickup) if you'd like to assign IDs.
+Ова функција не враћа ID pickup-а који можете користити, на пример, у OnPlayerPickUpPickup. Ако желите да имате pickup ID, користите [CreatePickup](CreatePickup).
 
 :::
 
-## Related Functions
+## Повезане функције
 
-- [CreatePickup](CreatePickup): Create a pickup.
-- [DestroyPickup](DestroyPickup): Destroy a pickup.
+- [CreatePickup](CreatePickup): Креира pickup.
+- [DestroyPickup](DestroyPickup): Уништава pickup.
 
-## Related Resources
+## Повезани ресурси
 
-- [Pickup IDs](../resources/pickupids)
+- [Pickup ID-еви](../resources/pickupids)

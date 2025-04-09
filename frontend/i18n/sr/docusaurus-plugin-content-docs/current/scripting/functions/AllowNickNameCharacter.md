@@ -1,41 +1,43 @@
 ---
 title: AllowNickNameCharacter
 sidebar_label: AllowNickNameCharacter
-description: Allows a character to be used in the nick name.
+description: Дозвољава употребу одређеног карактера у nick name-у.
 tags: []
 ---
 
-<VersionWarn version='omp v1.1.0.2612' />
+<VersionWarnSR version='omp v1.1.0.2612' />
 
-## Description
+## Опис
 
-Allows a character to be used in the nick name.
+Дозвољава употребу одређеног карактера у nick name-у.
 
-| Name       | Description                         |
+## Параметри
+
+| Назив       | Опис                         |
 | ---------- | ----------------------------------- |
-| character  | The character to allow or disallow. |
-| bool:allow | true-Allow, false-Disallow          |
+| character  | Карактер који се дозвољава или забрањује. |
+| bool:allow | **true** – дозвољава, **false** – забрањује.          |
 
-## Returns
+## Враћа
 
-This function does not return any specific values.
+Ова функција не враћа никакве специфичне вредности.
 
-## Examples
+## Примери
 
 ```c
 public OnGameModeInit()
 {
-    AllowNickNameCharacter('*', true); // Allow char *
-    AllowNickNameCharacter('[', false); // Disallow char [
-    AllowNickNameCharacter(']', false); // Disallow char ]
+    AllowNickNameCharacter('*', true); // Дозволи карактер *
+    AllowNickNameCharacter('[', false); // Забрани карактер [
+    AllowNickNameCharacter(']', false); // Забрани карактер ]
 
     return 1;
 }
 ```
 
-## Related Functions
+## Повезане функције
 
-- [IsNickNameCharacterAllowed](IsNickNameCharacterAllowed): Checks if a character is allowed in nickname.
-- [IsValidNickName](IsValidNickName): Checks if a nick name is valid.
-- [SetPlayerName](SetPlayerName): Sets the name of a player.
-- [GetPlayerName](GetPlayerName): Gets the name of a player.
+- [IsNickNameCharacterAllowed](IsNickNameCharacterAllowed): Проверава да ли је карактер дозвољен у nick name-у.
+- [IsValidNickName](IsValidNickName): Проверава да ли је nick name валидан.
+- [SetPlayerName](SetPlayerName): Поставља име играча.
+- [GetPlayerName](GetPlayerName): Враћа име играча.

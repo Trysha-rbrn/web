@@ -1,26 +1,28 @@
 ---
 title: AllowPlayerWeapons
 sidebar_label: AllowPlayerWeapons
-description: Enable/Disable weapons for a player.
+description: Омогућава или онемогућава оружје за одређеног играча.
 tags: ["player"]
 ---
 
-<VersionWarn version='omp v1.1.0.2612' />
+<VersionWarnSR version='omp v1.1.0.2612' />
 
-## Description
+## Опис
 
-Enable/Disable weapons for a player.
+Омогућава или онемогућава оружје за одређеног играча.
 
-| Name       | Description                            |
+## Параметри
+
+| Назив       | Опис                            |
 | ---------- | -------------------------------------- |
-| playerid   | The ID of the player to allow weapons  |
-| bool:allow | true for allow and false for disallow. |
+| playerid   | ID играча коме се оружје омогућава/забрањује.  |
+| bool:allow | **true** за омогућавање, **false** за забрану. |
 
-## Returns
+## Враћа
 
-This function always returns true.
+Ова функција увек враћа **true**.
 
-## Examples
+## Примери
 
 ```c
 public OnPlayerConnect(playerid)
@@ -30,6 +32,6 @@ public OnPlayerConnect(playerid)
 }
 ```
 
-## Related Functions
+## Повезане функције
 
-- [ArePlayerWeaponsAllowed](ArePlayerWeaponsAllowed): Can the player use weapons?
+- [ArePlayerWeaponsAllowed](ArePlayerWeaponsAllowed): Да ли играч може да користи оружје?

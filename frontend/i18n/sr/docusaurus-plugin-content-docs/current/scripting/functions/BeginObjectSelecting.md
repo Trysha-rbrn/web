@@ -1,25 +1,25 @@
 ---
 title: BeginObjectSelecting
 sidebar_label: BeginObjectSelecting
-description: Display the cursor and allow the player to select an object.
+description: Приказује курсор и омогућава играчу да изабере објекат.
 tags: ["object"]
 ---
 
-<VersionWarn version='omp v1.1.0.2612' />
+<VersionWarnSR version='omp v1.1.0.2612' />
 
-## Description
+## Опис
 
-Display the cursor and allow the player to select an object. OnPlayerSelectObject is called when the player selects an object.
+Приказује курсор и омогућава играчу да изабере објекат. OnPlayerSelectObject се позива када играч изабере објекат.
 
-| Name     | Description                                                   |
+| Име     | Опис                                                   |
 | -------- | ------------------------------------------------------------- |
-| playerid | The ID of the player that should be able to select the object |
+| playerid | 	ID играча који треба да буде у могућности да изабере објекат. |
 
-## Returns
+## Враћа
 
-This function does not return any specific values.
+Ова функција не враћа никакве специфичне вредности.
 
-## Examples
+## Примери
 
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
@@ -34,16 +34,16 @@ public OnPlayerCommandText(playerid, cmdtext[])
 }
 ```
 
-## Related Functions
+## Повезане функције
 
-- [CreateObject](CreateObject): Create an object.
-- [DestroyObject](DestroyObject): Destroy an object.
-- [MoveObject](MoveObject): Move an object.
-- [BeginObjectEditing](BeginObjectEditing): Edit an object.
-- [BeginPlayerObjectEditing](BeginPlayerObjectEditing): Edit an object.
-- [EditAttachedObject](EditAttachedObject): Edit an attached object.
-- [EndObjectEditing](EndObjectEditing): Cancel the edition of an object.
+- [CreateObject](CreateObject): Креира објекат.
+- [DestroyObject](DestroyObject): Уништава објекат.
+- [MoveObject](MoveObject): Помера објекат.
+- [BeginObjectEditing](BeginObjectEditing): Уреди објекат.
+- [BeginPlayerObjectEditing](BeginPlayerObjectEditing): Уреди објекат.
+- [EditAttachedObject](EditAttachedObject): Уреди прикачени објекат.
+- [EndObjectEditing](EndObjectEditing): Откажи уређивање објекта.
 
-## Related Callbacks
+## Повезане повратне функције
 
-- [OnPlayerSelectObject](../callbacks/OnPlayerSelectObject): Called when a player selected an object.
+- [OnPlayerSelectObject](../callbacks/OnPlayerSelectObject): Позива се када играч изабере објекат.

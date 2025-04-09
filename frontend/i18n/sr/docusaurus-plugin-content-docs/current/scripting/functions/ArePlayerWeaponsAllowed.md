@@ -1,40 +1,42 @@
 ---
 title: ArePlayerWeaponsAllowed
 sidebar_label: ArePlayerWeaponsAllowed
-description: Can the player use weapons?
+description: Да ли играч може да користи оружје?
 tags: ["player"]
 ---
 
-<VersionWarn version='omp v1.1.0.2612' />
+<VersionWarnSR version='omp v1.1.0.2612' />
 
-## Description
+## Опис
 
-Can the player use weapons?
+Да ли играч може да користи оружје?
 
-| Name     | Description                    |
+## Параметри
+
+| Име     | Опис                    |
 | -------- | ------------------------------ |
-| playerid | The ID of the player to check. |
+| playerid | ID играча којем се проверава дозвола. |
 
-## Returns
+## Враћа
 
-**true** - Player is allowed.
+**true** - Играч има дозволу.
 
-**false** - Player is not allowed.
+**false** - Играч нема дозволу.
 
-## Examples
+## Примери
 
 ```c
 public OnPlayerSpawn(playerid)
 {
     if (ArePlayerWeaponsAllowed(playerid))
     {
-        // do something
+        // уради нешто овде..
     }
 
     return 1;
 }
 ```
 
-## Related Functions
+## Повезане функције
 
-- [AllowPlayerWeapons](AllowPlayerWeapons): Enable/Disable weapons for a player.
+- [AllowPlayerWeapons](AllowPlayerWeapons): Омогућава или онемогућава оружје за играча.

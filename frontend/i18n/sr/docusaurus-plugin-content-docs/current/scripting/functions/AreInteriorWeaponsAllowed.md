@@ -1,31 +1,31 @@
 ---
 title: AreInteriorWeaponsAllowed
 sidebar_label: AreInteriorWeaponsAllowed
-description: Can weapons be used in interiors?
+description: Да ли је дозвољено коришћење оружја унутар интеријера?
 tags: []
 ---
 
-<VersionWarn version='omp v1.1.0.2612' />
+<VersionWarnSR version='omp v1.1.0.2612' />
 
-## Description
+## Опис
 
-Can weapons be used in interiors?
+Да ли је дозвољено коришћење оружја унутар интеријера?
 
-## Returns
+## Враћа
 
-true: Allowed.
+**true**: Дозвољено..
 
-false: Not allowed.
+**false**: Недозвољено.
 
-## Examples
+## Примери
 
 ```c
 if (AreInteriorWeaponsAllowed())
 {
-    // Do something
+    // Уради овде нешто
 }
 ```
 
-## Related Functions
+## Повезане функције
 
-- [AllowInteriorWeapons](AllowInteriorWeapons): Toggle whether the usage of weapons in interiors is allowed or not.
+- [AllowInteriorWeapons](AllowInteriorWeapons): Омогућава или онемогућава коришћење оружја унутар интеријера.

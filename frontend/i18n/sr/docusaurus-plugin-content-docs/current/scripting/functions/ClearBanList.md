@@ -1,21 +1,21 @@
 ---
 title: ClearBanList
 sidebar_label: ClearBanList
-description: Clears the ban list.
+description: Брише бан листу.
 tags: []
 ---
 
-<VersionWarn version='omp v1.1.0.2612' />
+<VersionWarnSR version='omp v1.1.0.2612' />
 
-## Description
+## Опис
 
-Clears the ban list.
+Брише бан листу.
 
-## Returns
+## Враћа    
 
-**true** - Success.
+**true** - Успешно.
 
-**false** - Failed to execute the function.
+**false** - Неуспешно извршавање функције.
 
 ## Examples
 
@@ -37,19 +37,19 @@ public OnPlayerCommandText(playerid, cmdtext[])
 }
 ```
 
-## Notes
+## Белешке
 
 :::tip
 
-You can see the ban list in the **bans.json** file.
+Бан листу можете погледати у **bans.json** фајлу.
 
 :::
 
-## Related Functions
+## Повезане Функције
 
-- [BlockIpAddress](BlockIpAddress): Block an IP address from connecting to the server for a set amount of time.
-- [UnBlockIpAddress](UnBlockIpAddress): Unblock an IP that was previously blocked.
-- [Ban](Ban): Ban a player from playing on the server.
-- [BanEx](BanEx): Ban a player with a custom reason.
-- [Kick](Kick): Kick a player from the server.
-- [IsBanned](IsBanned): Checks if the given IP address is banned.
+- [BlockIpAddress](BlockIpAddress): Блокира IP адресу за повезивање на сервер на одређени временски период.
+- [UnBlockIpAddress](UnBlockIpAddress): Одблокира IP који је раније био блокиран.
+- [Ban](Ban): Банује играча да игра на серверу.
+- [BanEx](BanEx): Банује играча са прилагођеним разлогом.
+- [Kick](Kick): Избацује играча са сервера.
+- [IsBanned](IsBanned): Проверава да ли је одређена IP адреса банована.

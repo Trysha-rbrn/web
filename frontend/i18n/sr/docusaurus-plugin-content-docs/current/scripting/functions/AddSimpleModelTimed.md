@@ -1,33 +1,35 @@
 ---
 title: AddSimpleModelTimed
 sidebar_label: AddSimpleModelTimed
-description: Adds a new custom simple object model for download.
+description:  Додаје нови прилагођени једноставни модел објекта за преузимање.
 tags: ["custom model", "simple model"]
 ---
 
-<VersionWarn version='SA-MP 0.3.DL R1' />
+<VersionWarnSR version='SA-MP 0.3.DL R1' />
 
-## Description
+## Опис
 
-Adds a new custom simple object model for download. The model files will be stored in player's Documents\GTA San Andreas User Files\SAMP\cache under the Server IP and Port folder in a CRC-form file name.
+Додаје нови прилагођени једноставни модел објекта за преузимање. Фајлови модела ће бити сачувани у корисниковом директоријуму Documents\GTA San Andreas User Files\SAMP\cache у фасцикли са IP адресом и портом сервера, под именом фајла базираном на CRC вредности.
 
-| Name                   | Description                                                                                                                 |
+## Параметри
+
+| Назив                   | Опис                                                                                                                 |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| virtualWorld           | The virtual world ID to make the model available at. Use -1 for all worlds.                                                 |
-| baseid                 | The base object model ID to use (original object to use when download is failed).                                           |
-| newid                  | The new object model ID ranged from -1000 to -30000 (29000 slots) to be used later with CreateObject or CreatePlayerObject. |
-| const dff[]            | Name of the .dff model collision file located in models server folder by default (artpath setting).                         |
-| const textureLibrary[] | Name of the .txd model texture file located in models server folder by default (artpath setting).                           |
-| timeOn                 | The world game time (hour) this object will appear                                                                          |
-| timeOff                | The world game time (hour) this object will disappear                                                                       |
+| virtualWorld           | ID виртуелног света у ком ће модел бити доступан. Користити -1 за све светове.                                                 |
+| baseid                 | ID базног модела објекта који се користи када преузимање модела не успе.                                           |
+| newid                  | Нови ID модела објекта у распону од -1000 до -30000 (доступно 29000 слотова), који се касније користи са CreateObject или CreatePlayerObject. |
+| const dff[]            | Име .dff фајла са колизијом модела који се налази у директоријуму models на серверу (дефинисано у artpath).                         |
+| const textureLibrary[] | Име .txd фајла са текстурама модела који се налази у директоријуму models на серверу (дефинисано у artpath).                           |
+| timeOn                 | Играчко време (сат) када се модел појављује.                                                                          |
+| timeOff                | Играчко време (сат) када модел нестаје.                                                                       |
 
-## Returns
+## Враћа
 
-**1:** The function executed successfully.
+**1:** Функција је успешно извршена.
 
-**0:** The function failed to execute.
+**0:** Функција није могла да се изврши.
 
-## Examples
+## Примери
 
 ```c
 public OnGameModeInit()
@@ -37,27 +39,27 @@ public OnGameModeInit()
 }
 ```
 
-## Notes
+## Белешке
 
 :::tip
 
-**useartwork** or **artwork.enable** must be enabled first in server settings in order for this to work.
+**useartwork** или **artwork.enable** морају бити укључени у подешавањима сервера да би ово радило.
 
-When virtualworld is set, the models will be downloaded once the player enters the specific world.
+Ако је постављен virtualWorld, модели ће се преузети када играч уђе у тај свет.
 
 :::
 
 :::warning
 
-There are currently no restrictions on when you can call this function, but be aware that if you do not call them inside [OnFilterScriptInit](../callbacks/OnFilterScriptInit)/[OnGameModeInit](../callbacks/OnGameModeInit), you run the risk that some players, who are already on the server, may not have downloaded the models.
+Тренутно не постоје ограничења када можете позвати ову функцију, али ако је не позовете унутар [OnFilterScriptInit](../callbacks/OnFilterScriptInit)/[OnGameModeInit](../callbacks/OnGameModeInit), постоји ризик да неки играчи који су већ на серверу неће преузети моделе.
 
 :::
 
-## Related Functions
+## Повезане функције
 
-- [IsValidCustomModel](IsValidCustomModel): Checks if a custom model ID is valid.
-- [GetCustomModelPath](GetCustomModelPath): Get a custom model path.
+- [IsValidCustomModel](IsValidCustomModel): Проверава да ли је ID прилагођеног модела валидан.
+- [GetCustomModelPath](GetCustomModelPath): Враћа путању до прилагођеног модела.
 
-## Related Callbacks
+## Повезане повратне функције
 
-- [OnPlayerFinishedDownloading](../callbacks/OnPlayerFinishedDownloading): Called when a player finishes downloading custom models.
+- [OnPlayerFinishedDownloading](../callbacks/OnPlayerFinishedDownloading): Позива се када играч заврши преузимање прилагођених модела.

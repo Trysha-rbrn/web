@@ -1,29 +1,29 @@
 ---
 title: UsePlayerGangZoneCheck
 sidebar_label: UsePlayerGangZoneCheck
-description: Enables the callback when a player enters/leaves this zone
+description: Омогућава позивну функцију када играч уђе/напусти зону.
 tags: ["player", "gangzone", "playergangzone"]
 ---
 
-<VersionWarn version='omp v1.1.0.2612' />
+<VersionWarnSR version='omp v1.1.0.2612' />
 
-## Description
+## Опис
 
-Enables the callback when a player enters/leaves this zone.
+Омогућава позивну функцију када играч уђе/напусти зону.
 
-| Name        | Description                                                                                                   |
+| Назив        | Опис                                                                                                   |
 | ----------- | ------------------------------------------------------------------------------------------------------------- |
-| playerid    | The ID of the player for whom you want to enable callback triggering when the player enters/leaves this zone. |
-| zoneid      | The ID of the player-zone to enable area detection for.                                                       |
-| bool:enable | Should entry detection be started or stopped? (`true`/`false`)                                                |
+| playerid    | ID играча за којег желите да омогућите позивну функцију када играч уђе/напусти ову зону. |
+| zoneid      | ID зоне играча за коју ће бити омогућена детекција подручја.                                                       |
+| bool:enable | Да ли треба започети или зауставити детекцију улаза? (`true`/`false`).                                                |
 
-## Returns
+## Враћа
 
-**true** - The function executed successfully.
+**true** - Функција је успешно извршена.
 
-**false** - The function failed to execute. The gangzone specified does not exist.
+**false** - Функција није успела да се изврши. Зона која је наведена не постоји.
 
-## Examples
+## Примери
 
 ```c
 // This variable is used to store the id of the gangzone
@@ -62,26 +62,26 @@ public OnPlayerLeavePlayerGangZone(playerid, zoneid)
 }
 ```
 
-## Related Callbacks
+## Повезани повратни позиви
 
-The following callbacks might be useful, as they're related to this function in one way or another. 
+Следећи повратни позиви могу бити корисни, јер су на неки начин повезани са овом функцијом.
 
-- [OnPlayerEnterPlayerGangZone](../callbacks/OnPlayerEnterPlayerGangZone): This callback is called when a player enters a player gangzone.
-- [OnPlayerLeavePlayerGangZone](../callbacks/OnPlayerLeavePlayerGangZone): This callback is called when a player exited a player gangzone.
+- [OnPlayerEnterPlayerGangZone](../callbacks/OnPlayerEnterPlayerGangZone): Овај повратни позив се позива када играч уђе у зону играча.
+- [OnPlayerLeavePlayerGangZone](../callbacks/OnPlayerLeavePlayerGangZone): Овај повратни позив се позива када играч напусти зону играча.
 
-## Related Functions
+## Повезане функције
 
-The following functions might be useful, as they're related to this function in one way or another. 
+Следеће функције могу бити корисне, јер су на неки начин повезане са овом функцијом.
 
-- [CreatePlayerGangZone](CreatePlayerGangZone): Create player gangzone.
-- [PlayerGangZoneDestroy](PlayerGangZoneDestroy): Destroy player gangzone.
-- [PlayerGangZoneShow](PlayerGangZoneShow): Show player gangzone.
-- [PlayerGangZoneHide](PlayerGangZoneHide): Hide player gangzone.
-- [PlayerGangZoneFlash](PlayerGangZoneFlash): Start player gangzone flash.
-- [PlayerGangZoneStopFlash](PlayerGangZoneStopFlash): Stop player gangzone flash.
-- [PlayerGangZoneGetFlashColour](PlayerGangZoneGetFlashColour): Get the flashing colour of a player gangzone.
-- [PlayerGangZoneGetColour](PlayerGangZoneGetColour): Get the colour of a player gangzone.
-- [PlayerGangZoneGetPos](PlayerGangZoneGetPos): Get the position of a gangzone, represented by minX, minY, maxX, maxY coordinates.
-- [IsValidPlayerGangZone](IsValidPlayerGangZone): Check if the player gangzone valid.
-- [IsPlayerInPlayerGangZone](IsPlayerInPlayerGangZone): Check if the player in player gangzone.
-- [IsPlayerGangZoneVisible](IsPlayerGangZoneVisible): Check if the player gangzone is visible.
+- [CreatePlayerGangZone](CreatePlayerGangZone): Креира зону играча.
+- [PlayerGangZoneDestroy](PlayerGangZoneDestroy): Уништава зону играча.
+- [PlayerGangZoneShow](PlayerGangZoneShow): Приказује зону играча.
+- [PlayerGangZoneHide](PlayerGangZoneHide): Скрива зону играча.
+- [PlayerGangZoneFlash](PlayerGangZoneFlash): Започиње трептање зоне играча.
+- [PlayerGangZoneStopFlash](PlayerGangZoneStopFlash): Зауставља трептање зоне играча.
+- [PlayerGangZoneGetFlashColour](PlayerGangZoneGetFlashColour): Добија боју трептања зоне играча.
+- [PlayerGangZoneGetColour](PlayerGangZoneGetColour): Добија боју зоне играча.
+- [PlayerGangZoneGetPos](PlayerGangZoneGetPos): Добија позицију зоне играча, представљену минималним и максималним X, Y координатама.
+- [IsValidPlayerGangZone](IsValidPlayerGangZone): Проверава да ли је зона играча валидна.
+- [IsPlayerInPlayerGangZone](IsPlayerInPlayerGangZone): Проверава да ли је играч у зони играча.
+- [IsPlayerGangZoneVisible](IsPlayerGangZoneVisible): Проверава да ли је зона играча видљива.
